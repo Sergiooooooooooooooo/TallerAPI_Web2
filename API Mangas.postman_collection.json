@@ -28,7 +28,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"Mob Psycho 100\",\r\n    \"autor\": \"ONE\",\r\n    \"genero\": [\"Acción\", \"Comedia\", \"Sobrenatural\"],\r\n    \"volumenes\": 16,\r\n    \"fechaPublicacion\": \"2012-11-18\",\r\n    \"sinopsis\": \"La historia sigue a Shigeo Kageyama, un chico de secundaria conocido como 'Mob', que posee poderosas habilidades psíquicas. A pesar de su extraordinario potencial, Mob busca llevar una vida normal y controlar sus emociones, mientras enfrenta desafíos sobrenaturales y problemas de la vida cotidiana.\",\r\n    \"calificacion\": 9.3,\r\n    \"editorial\": \"Shogakukan\"\r\n}\r\n\r\n\r\n\r\n\r\n\r\n",
+					"raw": "{\r\n    \"titulo\": \"Dr. Slump\",\r\n    \"autor\": \"Akira Toriyama\",\r\n    \"genero\": [\"Comedia\", \"Aventura\", \"Fantasia\"],\r\n    \"volumenes\": 18,\r\n    \"fechaPublicacion\": \"1980-03-17\",\r\n    \"sinopsis\": \"La serie sigue las travesuras de Arale Norimaki, un robot niño, y su creador, el Dr. Senbei Norimaki, en el pueblo de Penguin Village. Con su fuerza sobrehumana y su personalidad inocente, Arale se enfrenta a situaciones absurdas y divertidas.\",\r\n    \"calificacion\": 9.0,\r\n    \"editorial\": \"Shueisha\"\r\n}\r\n\r\n\r\n\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -36,13 +36,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/mangas",
+					"raw": "http://localhost:4000/api/v1/file/mangas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "4000",
 					"path": [
+						"api",
+						"v1",
+						"file",
 						"mangas"
 					]
 				},
@@ -80,13 +83,16 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/mangas",
+					"raw": "http://localhost:4000/api/v1/file/mangas",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "4000",
 					"path": [
+						"api",
+						"v1",
+						"file",
 						"mangas"
 					]
 				},
@@ -116,7 +122,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"genero\": [\"Acción\", \"Fantasía\"]\n}",
+					"raw": "{\n    \"autor\": \"Akira Toriyama, Toyotaro\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -124,15 +130,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/mangas/4",
+					"raw": "http://localhost:4000/api/v1/file/mangas/13",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "4000",
 					"path": [
+						"api",
+						"v1",
+						"file",
 						"mangas",
-						"4"
+						"13"
 					]
 				},
 				"description": "This is a PUT request and it is used to overwrite an existing piece of data. For instance, after you create an entity with a POST request, you may want to modify that later. You can do that using a PUT request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful PUT request typically returns a `200 OK`, `201 Created`, or `204 No Content` response code."
@@ -169,15 +178,18 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:4000/mangas/5",
+					"raw": "http://localhost:4000/api/v1/file/mangas/14",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "4000",
 					"path": [
+						"api",
+						"v1",
+						"file",
 						"mangas",
-						"5"
+						"14"
 					]
 				},
 				"description": "This is a DELETE request, and it is used to delete data that was previously created via a POST request. You typically identify the entity being updated by including an identifier in the URL (eg. `id=1`).\n\nA successful DELETE request typically returns a `200 OK`, `202 Accepted`, or `204 No Content` response code."
@@ -190,15 +202,49 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:4000/mangas/7",
+					"raw": "http://localhost:4000/api/v1/file/mangas/13",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "4000",
 					"path": [
+						"api",
+						"v1",
+						"file",
 						"mangas",
-						"7"
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar todos los mangas",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n{\r\n    \"field\": \"calificacion\",\r\n    \"value\": 9.2\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/v1/file/mangas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"v1",
+						"file",
+						"mangas"
 					]
 				}
 			},
