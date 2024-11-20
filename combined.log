@@ -125,3 +125,5 @@
 {"level":"info","message":"Received request: GET /"}
 {"level":"info","message":"Received request: GET /11"}
 {"level":"info","message":"Received request: GET /13"}
+{"level":"info","message":"Received request: GET /"}
+{"level":"info","message":"Received request: POST /"}

@@ -1,5 +1,5 @@
 import express from "express";
-import { read, write } from '../src/utils/files.js';
+import { read, write } from '../utils/files.js';
 import winston from 'winston';
 import Joi from 'joi';
 import dayjs from 'dayjs';
